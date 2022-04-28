@@ -114,4 +114,5 @@ Server username: www—data (33)
 ## 🙏Practicing Sites:
                   https://tryhackme.com/room/allinonemj
                   https://tryhackme.com/room/wordpresscve202129447
+                  https://tryhackme.com/room/blog
 ## 💠 Happy Hackings 🔡
