@@ -53,6 +53,7 @@ Example :
 If we are checking and testing properly of our target wordpress website and if  target wordpress website is vulneable we will see some CVE or Exploite information after using above wpscan command
 ### ☑️WordPress User Bruteforce
 WPScan can be used to brute force usernames and passwords. The tool uses two kinds of login brute force attacks, xmlrpc and wp-login. The wp-login method will attempt to brute force the normal WordPress login page, while the xmlrpc method uses the WordPress API to make login attempts through /xmlrpc.php. The xmlrpc method is preferred as it is faster.
+
 Command :
           
           wpscan --password-attack xmlrpc -t 20 -U admin, david -P passwords.txt --url http://blog.inlanefreight.com
