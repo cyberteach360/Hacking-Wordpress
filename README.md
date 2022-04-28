@@ -108,4 +108,6 @@ Exploit target:
 
 meterpreter > getuid
 Server username: www—data (33)
-    
+## Practicing Sites:
+                  https://tryhackme.com/room/allinonemj
+                  https://tryhackme.com/room/wordpresscve202129447
