@@ -139,7 +139,11 @@ There are five types of users in a standard WordPress installation.
      Author 	     Authors can publish and manage their own posts.
      Contributor 	These users can write and manage their own posts but cannot publish them.
      Subscriber 	These are normal users who can browse posts and edit their profiles.
-   
+
+
+Gaining access as an administrator is usually needed to obtain code execution on the server. However, editors and authors might have access to certain vulnerable plugins that normal users do not.
+ 
+ 
 # 🥇Enumeration Procedure For Wordpress Website in Manually
 
 ### Wordpress Version Check
