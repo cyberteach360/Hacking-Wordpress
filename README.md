@@ -1,9 +1,38 @@
 #          🔥Hacking-Wordpress 🔥
 ![wordpress-hacking](https://user-images.githubusercontent.com/79256105/165776319-f7d73fb8-6bd9-4847-97da-461b641fbfe0.png)
 
-## Basic Wordpress and Wordpress Structure
+# Basic Wordpress and Wordpress Structure
+### 🔥Wordpress Structure 🔥
 
-## Key WordPress Files
+WordPress can be installed on a Windows, Linux, or Mac OSX host. For this module, we will focus on a default WordPress installation on an Ubuntu Linux web server. WordPress requires a fully installed and configured LAMP stack (Linux operating system, Apache HTTP Server, MySQL database, and the PHP programming language) before installation on a Linux host. After installation, all WordPress supporting files and directories will be accessible in the webroot located at /var/www/html.
+
+Below is the directory structure of a default WordPress install, showing the key files and subdirectories necessary for the website to function properly.
+
+
+     tree -L 1 /var/www/html
+
+     ├── index.php
+     ├── license.txt
+     ├── readme.html
+     ├── wp-activate.php
+     ├── wp-admin
+     ├── wp-blog-header.php
+     ├── wp-comments-post.php
+     ├── wp-config.php
+     ├── wp-config-sample.php
+     ├── wp-content
+     ├── wp-cron.php
+     ├── wp-includes
+     ├── wp-links-opml.php
+     ├── wp-load.php
+     ├── wp-login.php
+     ├── wp-mail.php
+     ├── wp-settings.php
+     ├── wp-signup.php
+     ├── wp-trackback.php
+     └── xmlrpc.php
+
+## 👽 Key WordPress Files ♀️
 
 The root directory of WordPress contains files that are needed to configure WordPress to function correctly.
 
@@ -22,6 +51,52 @@ The root directory of WordPress contains files that are needed to configure Word
 This file can also be renamed to make it more challenging to find the login page.
 
     xmlrpc.php is a file representing a feature of WordPress that enables data to be transmitted with HTTP acting as the transport mechanism and XML as the encoding mechanism. This type of communication has been replaced by the WordPress REST API.
+WordPress Configuration File
+## WordPress Configuration File
+    The wp-config.php file contains information required by WordPress to connect to the database, such as the database name, database host, username and password, authentication keys and salts, and the database table prefix. This configuration file can also be used to activate DEBUG mode, which can useful in troubleshooting.
+
+wp-config.php
+   Code: php
+
+   <?php
+   /** <SNIP> */
+   /** The name of the database for WordPress */
+   define( 'DB_NAME', 'database_name_here' );
+
+   /** MySQL database username */
+   define( 'DB_USER', 'username_here' );
+
+   /** MySQL database password */
+   define( 'DB_PASSWORD', 'password_here' );
+
+  /** MySQL hostname */
+  define( 'DB_HOST', 'localhost' );
+
+  /** Authentication Unique Keys and Salts */
+  /* <SNIP> */
+  define( 'AUTH_KEY',         'put your unique phrase here' );
+  define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );
+  define( 'LOGGED_IN_KEY',    'put your unique phrase here' );
+  define( 'NONCE_KEY',        'put your unique phrase here' );
+  define( 'AUTH_SALT',        'put your unique phrase here' );
+  define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );
+  define( 'LOGGED_IN_SALT',   'put your unique phrase here' );
+  define( 'NONCE_SALT',       'put your unique phrase here' );
+
+  /** WordPress Database Table prefix */
+  $table_prefix = 'wp_';
+
+  /** For developers: WordPress debugging mode. */
+  /** <SNIP> */
+  define( 'WP_DEBUG', false );
+
+ /** Absolute path to the WordPress directory. */
+ if ( ! defined( 'ABSPATH' ) ) {
+	define( 'ABSPATH', __DIR__ . '/' );
+ }
+
+ /** Sets up WordPress vars and included files. */
+ require_once ABSPATH . 'wp-settings.php';
 
 
 # 🥇Enumeration Procedure For Wordpress Website in Manually
