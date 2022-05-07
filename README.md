@@ -1,6 +1,29 @@
 #          🔥Hacking-Wordpress 🔥
 ![wordpress-hacking](https://user-images.githubusercontent.com/79256105/165776319-f7d73fb8-6bd9-4847-97da-461b641fbfe0.png)
 
+## Basic Wordpress and Wordpress Structure
+
+## Key WordPress Files
+
+The root directory of WordPress contains files that are needed to configure WordPress to function correctly.
+
+    index.php is the homepage of WordPress.
+
+    license.txt contains useful information such as the version WordPress installed.
+
+    wp-activate.php is used for the email activation process when setting up a new WordPress site.
+
+    wp-admin folder contains the login page for administrator access and the backend dashboard. Once a user has logged in, they can make changes to the site based on their assigned permissions. The login page can be located at one of the following paths:
+    /wp-admin/login.php
+    /wp-admin/wp-login.php
+    /login.php
+    /wp-login.php
+
+This file can also be renamed to make it more challenging to find the login page.
+
+    xmlrpc.php is a file representing a feature of WordPress that enables data to be transmitted with HTTP acting as the transport mechanism and XML as the encoding mechanism. This type of communication has been replaced by the WordPress REST API.
+
+
 # 🥇Enumeration Procedure For Wordpress Website in Manually
 
 ### Wordpress Version Check
