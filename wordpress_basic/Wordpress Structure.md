@@ -6,7 +6,7 @@ Below is the directory structure of a default WordPress install, showing the key
 
 
      tree -L 1 /var/www/html
-.
+
      ├── index.php
      ├── license.txt
      ├── readme.html
