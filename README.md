@@ -99,10 +99,47 @@ wp-config.php
     /** Sets up WordPress vars and included files. */
     require_once ABSPATH . 'wp-settings.php';
 
+# Key WordPress Directories
+The wp-content folder is the main directory where plugins and themes are stored. The subdirectory uploads/ is usually where any files uploaded to the platform are stored. These directories and files should be carefully enumerated as they may lead to contain sensitive data that could lead to remote code execution or exploitation of other vulnerabilities or misconfigurations.
+    
+#### WP-Content
 
+    tree -L 1 /var/www/html/wp-content
 
+    ├── index.php
+    ├── plugins
+    └── themes
+ 
+#### WP-Includes
 
+wp-includes contains everything except for the administrative components and the themes that belong to the website. This is the directory where core files are stored, such as certificates, fonts, JavaScript files, and widgets.
 
+   
+     tree -L 1 /var/www/html/wp-includes
+
+     ├── theme.php
+     ├── update.php
+     ├── user.php
+     ├── vars.php
+     ├── version.php
+     ├── widgets
+     ├── widgets.php
+     ├── wlwmanifest.xml
+     ├── wp-db.php
+     └── wp-diff.php
+     
+ 
+# WordPress User Roles 
+
+There are five types of users in a standard WordPress installation.
+
+   Role 	          Description
+   Administrator 	This user has access to administrative features within the website. This includes adding and deleting users and posts, as well as                         editing source code.
+   Editor 	     An editor can publish and manage posts, including the posts of other users.
+   Author 	     Authors can publish and manage their own posts.
+   Contributor 	These users can write and manage their own posts but cannot publish them.
+   Subscriber 	T    hese are normal users who can browse posts and edit their profiles.
+   
 # 🥇Enumeration Procedure For Wordpress Website in Manually
 
 ### Wordpress Version Check
