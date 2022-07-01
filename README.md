@@ -178,9 +178,9 @@ Command :
 # ⤵️Enumeration Procedure For Wordpress Website in Automatically Using wpscan
 WPScan is an automated WordPress scanner and enumeration tool. It determines if the various themes and plugins used by a WordPress site are outdated or vulnerable. It is installed by default on Parrot OS ,Kali OS but can also be installed manually with gem
          gem install wpscan
-Once the installation completes, we can issue a command such as wpscan --hh to verify the installation. This command will show us the usage menu with all of the available command-line switches available.
+Once the installation completes, we can issue a command such as ***wpscan*** --hh to verify the installation. This command will show us the usage menu with all of the available command-line switches available.
 ### 🔥Enumerating a Website with WPScan ⚛️
-The --enumerate flag is used to enumerate various components of the WordPress application such as plugins, themes, and users. By default, WPScan enumerates vulnerable plugins, themes, users, media, and backups. However, specific arguments can be supplied to restrict enumeration to specific components. For example, all plugins can be enumerated using the arguments --enumerate ap. Let's run a normal enumeration scan against a WordPress website.
+The --enumerate flag is used to enumerate various components of the WordPress application such as plugins, themes, and users. By default, ***WPScan enumerates vulnerable plugins, themes, users, media, and backups***. However, specific arguments can be supplied to restrict enumeration to specific components. For example, all plugins can be enumerated using the arguments --enumerate ap. Let's run a normal enumeration scan against a WordPress website.
 Command :
 
             wpscan --url http://blog.inlanefreight.com --enumerate --api-token api-token-value
